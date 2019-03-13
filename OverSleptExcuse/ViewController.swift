@@ -28,7 +28,7 @@ class ViewController: UIViewController {
        
         let time_to_leave_home = userDefault.string(forKey: "timeToLeaveHome")
         let time_to_nearest_station = userDefault.string(forKey: "timeToNearestStation")
-        let nearest_station_name = userDefault.string(forKey: "nearestStationName")
+        var nearest_station_name = userDefault.string(forKey: "nearestStationName")
         let desitination_station_name = userDefault.string(forKey: "desitinationStationName")
         
         //現在の日時
@@ -92,8 +92,10 @@ class ViewController: UIViewController {
         let minutes_first_disit = String(result_minute).prefix(1)
         let minutes_second_disit = String(result_minute).suffix(1)
         
+        var test_nearest_station_name:String = nearest_station_name ?? "meiyo"
+        var test_desitination_station_name:String = desitination_station_name ?? "meiyo"
         
-        var text = "https://transit.yahoo.co.jp/search/result?/?flatlon=&fromgid=&from=\(nearest_station_name)&tlatlon=&togid=&to=\(desitination_station_name)&viacode=&via=&viacode=&via=&viacode=&via=&y=\(year)&m=\(month)&d=\(day)&hh=\(hours)&m2=\(minutes_second_disit)&m1=\(minutes_first_disit)&type=1&ticket=ic&expkind=1&ws=3&s=0&al=1&shin=1&ex=1&hb=1&lb=1&sr=1&kw=\(desitination_station_name)"
+        var text = "https://transit.yahoo.co.jp/search/result?/?flatlon=&fromgid=&from=\(test_nearest_station_name)&tlatlon=&togid=&to=\(test_desitination_station_name)&viacode=&via=&viacode=&via=&viacode=&via=&y=\(year)&m=\(month)&d=\(day)&hh=\(hours)&m2=\(minutes_second_disit)&m1=\(minutes_first_disit)&type=1&ticket=ic&expkind=1&ws=3&s=0&al=1&shin=1&ex=1&hb=1&lb=1&sr=1&kw=\(test_desitination_station_name))"
         //エンコードかます
         text = text.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         
@@ -106,6 +108,7 @@ class ViewController: UIViewController {
                 let webContent = String(data: urlContent, encoding: String.Encoding.utf8)
                 
                 if let test = webContent?.range(of:"→<span class=\"mark\">") {
+                //if let test = webContent?.range(of:"八戸ノ里") {
                     
                     //print("見つかりました。 index: \(webContent?.distance(from: (webContent?.startIndex)!, to: test.lowerBound))")
                     //対象の文字が何文字目か
