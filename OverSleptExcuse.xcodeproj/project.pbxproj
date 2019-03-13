@@ -14,6 +14,8 @@
 		CF999BA52238EE7100423B5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF999BA32238EE7100423B5C /* LaunchScreen.storyboard */; };
 		CF999BB02238EE7100423B5C /* OverSleptExcuseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999BAF2238EE7100423B5C /* OverSleptExcuseTests.swift */; };
 		CF999BBB2238EE7100423B5C /* OverSleptExcuseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999BBA2238EE7100423B5C /* OverSleptExcuseUITests.swift */; };
+		CF999BC92238FC4D00423B5C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999BC82238FC4D00423B5C /* SettingViewController.swift */; };
+		CF999BCC2238FCA600423B5C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999BCB2238FCA600423B5C /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		CF999BB62238EE7100423B5C /* OverSleptExcuseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OverSleptExcuseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF999BBA2238EE7100423B5C /* OverSleptExcuseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverSleptExcuseUITests.swift; sourceTree = "<group>"; };
 		CF999BBC2238EE7100423B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF999BC82238FC4D00423B5C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		CF999BCB2238FCA600423B5C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		CF999B8E2238EE6300423B5C = {
 			isa = PBXGroup;
 			children = (
+				CF999BCA2238FC8400423B5C /* Extension */,
 				CF999B992238EE6300423B5C /* OverSleptExcuse */,
 				CF999BAE2238EE7100423B5C /* OverSleptExcuseTests */,
 				CF999BB92238EE7100423B5C /* OverSleptExcuseUITests */,
@@ -103,6 +108,7 @@
 				CF999BA12238EE7100423B5C /* Assets.xcassets */,
 				CF999BA32238EE7100423B5C /* LaunchScreen.storyboard */,
 				CF999BA62238EE7100423B5C /* Info.plist */,
+				CF999BC82238FC4D00423B5C /* SettingViewController.swift */,
 			);
 			path = OverSleptExcuse;
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				CF999BBC2238EE7100423B5C /* Info.plist */,
 			);
 			path = OverSleptExcuseUITests;
+			sourceTree = "<group>";
+		};
+		CF999BCA2238FC8400423B5C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CF999BCB2238FCA600423B5C /* String.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +272,8 @@
 			files = (
 				CF999B9D2238EE6300423B5C /* ViewController.swift in Sources */,
 				CF999B9B2238EE6300423B5C /* AppDelegate.swift in Sources */,
+				CF999BCC2238FCA600423B5C /* String.swift in Sources */,
+				CF999BC92238FC4D00423B5C /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
