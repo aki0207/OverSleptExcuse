@@ -1,6 +1,6 @@
 import UIKit
 
-class SettingViewController: UIViewController {
+class SettingViewController: Abstract {
     
     let userDefault = UserDefaults.standard
     

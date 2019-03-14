@@ -22,6 +22,7 @@
                     </view>
                     <connections>
                         <segue destination="vVL-tw-7fp" kind="presentation" identifier="toSetting" id="9vC-h7-Xbp"/>
+                        <segue destination="Rql-Cn-BlE" kind="presentation" identifier="toSideMenu" id="a5X-Pm-tfo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -120,11 +121,30 @@
                         <outlet property="time_to_leave_home" destination="5OO-NX-pgZ" id="6nq-Sq-gLu"/>
                         <outlet property="time_to_nearest_station" destination="ui3-2C-15m" id="YQ8-7x-Txf"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toMain" id="evS-uE-4zb"/>
+                        <segue destination="Rql-Cn-BlE" kind="presentation" identifier="toSideMenu" id="ymj-4c-zKb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1f2-dk-cBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="444" y="144.3778110944528"/>
         </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="AJU-C6-bYE">
+            <objects>
+                <viewController id="Rql-Cn-BlE" customClass="SettingViewController" customModule="OverSleptExcuse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xkO-fT-Txm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="L1r-nc-WbG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8C-hL-Fd4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="899"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ymj-4c-zKb"/>
+    </inferredMetricsTieBreakers>
 </document>

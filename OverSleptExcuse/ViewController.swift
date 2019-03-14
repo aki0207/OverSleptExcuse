@@ -1,7 +1,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ViewController: Abstract {
     
     let userDefault = UserDefaults.standard
     var isExists = false
@@ -66,7 +66,8 @@ class ViewController: UIViewController {
         
         if result_minute > 60 {
             
-            while(result_minute < 60) {
+            add_hour += 1
+            while(result_minute > 60) {
                 over_num += 1
                 result_minute -= 1
                 if over_num == 60 {
@@ -92,10 +93,11 @@ class ViewController: UIViewController {
         let minutes_first_disit = String(result_minute).prefix(1)
         let minutes_second_disit = String(result_minute).suffix(1)
         
-        var test_nearest_station_name:String = nearest_station_name ?? "meiyo"
-        var test_desitination_station_name:String = desitination_station_name ?? "meiyo"
+        //String型にしないとOptinal("駅名")ていう値になる。Optinalの部分いらんからStringにしてる
+        let convert_string_nearest_station_name:String = nearest_station_name ?? "lol"
+        let convert_string_desitination_station_name:String = desitination_station_name ?? "lol"
         
-        var text = "https://transit.yahoo.co.jp/search/result?/?flatlon=&fromgid=&from=\(test_nearest_station_name)&tlatlon=&togid=&to=\(test_desitination_station_name)&viacode=&via=&viacode=&via=&viacode=&via=&y=\(year)&m=\(month)&d=\(day)&hh=\(hours)&m2=\(minutes_second_disit)&m1=\(minutes_first_disit)&type=1&ticket=ic&expkind=1&ws=3&s=0&al=1&shin=1&ex=1&hb=1&lb=1&sr=1&kw=\(test_desitination_station_name))"
+        var text = "https://transit.yahoo.co.jp/search/result?/?flatlon=&fromgid=&from=\(convert_string_nearest_station_name)&tlatlon=&togid=&to=\(convert_string_desitination_station_name)&viacode=&via=&viacode=&via=&viacode=&via=&y=\(year)&m=\(month)&d=\(day)&hh=\(hours)&m2=\(minutes_second_disit)&m1=\(minutes_first_disit)&type=1&ticket=ic&expkind=1&ws=3&s=0&al=1&shin=1&ex=1&hb=1&lb=1&sr=1&kw=\(convert_string_desitination_station_name))"
         //エンコードかます
         text = text.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         
