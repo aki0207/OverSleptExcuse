@@ -1,12 +1,10 @@
 import UIKit
 import AVFoundation
 
-class SidemenuViewController: Abstract {
-    
-    //@IBOutlet weak var menuView: UIView!
-    
+
+class SideMenuViewController: Abstract {
+
     @IBOutlet weak var menuView: UIView!
-    
     var headerTitle: String = ""
     var closeViewRandomTag = 0
     var fromReadViewSession: AVCaptureSession! = nil
@@ -67,17 +65,14 @@ class SidemenuViewController: Abstract {
         }
     }
     
-    @IBAction func toFirstPageButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "toFirstFromSideMenu", sender: nil)
-    }
-    
-    
-    
-    
+   
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
+
+    @IBAction func toSettingButton(_ sender: Any) {
+    }
     
 }

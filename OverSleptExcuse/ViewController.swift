@@ -23,6 +23,9 @@ class ViewController: Abstract {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        super.createHeader(pTitle: "結果画面")
+        super.createSideMenu()
+        
         
         
        
