@@ -167,6 +167,7 @@
                         <outlet property="time_to_leave_home" destination="5OO-NX-pgZ" id="6nq-Sq-gLu"/>
                         <outlet property="time_to_nearest_station" destination="ui3-2C-15m" id="YQ8-7x-Txf"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toMain" id="evS-uE-4zb"/>
+                        <segue destination="NXC-zd-Al3" kind="presentation" identifier="toSideMenu" id="BHI-zd-1pR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1f2-dk-cBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -176,5 +177,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="xQ3-aW-NJr"/>
+        <segue reference="BHI-zd-1pR"/>
     </inferredMetricsTieBreakers>
 </document>
