@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF0B8FD9223DBFDC008BA07C /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */; };
+		CF0B8FDD223DC7CE008BA07C /* side_menu_open_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF0B8FDC223DC7CE008BA07C /* side_menu_open_icon.png */; };
 		CF999B9B2238EE6300423B5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999B9A2238EE6300423B5C /* AppDelegate.swift */; };
 		CF999B9D2238EE6300423B5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999B9C2238EE6300423B5C /* ViewController.swift */; };
 		CF999BA02238EE6300423B5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF999B9E2238EE6300423B5C /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		CF0B8FDC223DC7CE008BA07C /* side_menu_open_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = side_menu_open_icon.png; path = ../../../side_menu_open_icon.png; sourceTree = "<group>"; };
 		CF999B972238EE6300423B5C /* OverSleptExcuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OverSleptExcuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF999B9A2238EE6300423B5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF999B9C2238EE6300423B5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +57,6 @@
 		CF999BC82238FC4D00423B5C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		CF999BCB2238FCA600423B5C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CFBD5877223A48E400F5EA1A /* Abstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Abstract.swift; sourceTree = "<group>"; };
-		CFBD587C223A49D500F5EA1A /* side_menu_open_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = side_menu_open_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF0B8FDB223DC75C008BA07C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CF0B8FDC223DC7CE008BA07C /* side_menu_open_icon.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		CF999B8E2238EE6300423B5C = {
 			isa = PBXGroup;
 			children = (
@@ -106,10 +115,10 @@
 		CF999B992238EE6300423B5C /* OverSleptExcuse */ = {
 			isa = PBXGroup;
 			children = (
+				CF0B8FDB223DC75C008BA07C /* Images */,
 				CF999BCA2238FC8400423B5C /* Extension */,
 				CF999B9A2238EE6300423B5C /* AppDelegate.swift */,
 				CF999B9C2238EE6300423B5C /* ViewController.swift */,
-				CFBD5879223A49AE00F5EA1A /* Images */,
 				CF999B9E2238EE6300423B5C /* Main.storyboard */,
 				CF999BA12238EE7100423B5C /* Assets.xcassets */,
 				CF999BA32238EE7100423B5C /* LaunchScreen.storyboard */,
@@ -145,14 +154,6 @@
 				CF999BCB2238FCA600423B5C /* String.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		CFBD5879223A49AE00F5EA1A /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				CFBD587C223A49D500F5EA1A /* side_menu_open_icon.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF0B8FDD223DC7CE008BA07C /* side_menu_open_icon.png in Resources */,
 				CF999BA52238EE7100423B5C /* LaunchScreen.storyboard in Resources */,
 				CF999BA22238EE7100423B5C /* Assets.xcassets in Resources */,
 				CF999BA02238EE6300423B5C /* Main.storyboard in Resources */,
