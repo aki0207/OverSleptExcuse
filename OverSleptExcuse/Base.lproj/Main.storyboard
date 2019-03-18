@@ -70,7 +70,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RfQ-xh-fgS" firstAttribute="bottom" secondItem="L8J-Xj-Q5J" secondAttribute="bottom" id="F9n-zj-GAN"/>
                             <constraint firstItem="RfQ-xh-fgS" firstAttribute="top" secondItem="L8J-Xj-Q5J" secondAttribute="top" constant="60" id="Lrx-j0-GU7"/>
@@ -96,57 +96,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5OO-NX-pgZ">
-                                <rect key="frame" x="19" y="170" width="337.5" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="家を出発するまでの所要時間" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5OO-NX-pgZ">
+                                <rect key="frame" x="19" y="200" width="337.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ui3-2C-15m">
-                                <rect key="frame" x="19" y="250" width="337.5" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="最寄り駅までの所要時間" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ui3-2C-15m">
+                                <rect key="frame" x="19" y="280" width="337.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7n5-KR-ZZD">
-                                <rect key="frame" x="19" y="330" width="337.5" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="最寄り駅名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7n5-KR-ZZD">
+                                <rect key="frame" x="19" y="360" width="337.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-Jc-aQj">
-                                <rect key="frame" x="19" y="410" width="337.5" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="目的地駅名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-Jc-aQj">
+                                <rect key="frame" x="19" y="440" width="337.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2O-Aw-Bhq">
-                                <rect key="frame" x="20" y="555" width="165" height="30"/>
+                                <rect key="frame" x="20" y="585" width="165" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="クリア"/>
+                                <connections>
+                                    <action selector="clearButton:" destination="vVL-tw-7fp" eventType="touchDown" id="tp5-Au-4Mz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2co-cE-AJ9">
-                                <rect key="frame" x="195" y="555" width="165" height="30"/>
-                                <color key="backgroundColor" red="0.25261374580000001" green="1" blue="0.12671295369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="195" y="585" width="165" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="設定!"/>
                                 <connections>
                                     <action selector="doneButton:" destination="vVL-tw-7fp" eventType="touchUpInside" id="xxY-9s-RtL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9u-gY-z3L">
-                                <rect key="frame" x="19" y="35" width="337.5" height="115"/>
+                                <rect key="frame" x="19" y="100" width="337.5" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="QI2-rR-xjt"/>
+                                    <constraint firstAttribute="height" constant="60" id="QI2-rR-xjt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.25261374580000001" green="1" blue="0.12671295369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7n5-KR-ZZD" firstAttribute="height" secondItem="ui3-2C-15m" secondAttribute="height" id="0p4-wk-X2V"/>
-                            <constraint firstItem="k9u-gY-z3L" firstAttribute="top" secondItem="31y-ri-iSi" secondAttribute="top" constant="15" id="AJK-kJ-tbq"/>
+                            <constraint firstItem="k9u-gY-z3L" firstAttribute="top" secondItem="31y-ri-iSi" secondAttribute="top" constant="80" id="AJK-kJ-tbq"/>
                             <constraint firstItem="k9u-gY-z3L" firstAttribute="centerX" secondItem="WIJ-Jj-fyS" secondAttribute="centerX" id="AM3-Gm-7PJ"/>
                             <constraint firstItem="hGe-Jc-aQj" firstAttribute="width" secondItem="7n5-KR-ZZD" secondAttribute="width" id="Axx-VD-U2n"/>
                             <constraint firstItem="k9u-gY-z3L" firstAttribute="width" secondItem="5OO-NX-pgZ" secondAttribute="width" id="BXG-0B-sew"/>
@@ -168,7 +171,7 @@
                             <constraint firstItem="hGe-Jc-aQj" firstAttribute="centerX" secondItem="WIJ-Jj-fyS" secondAttribute="centerX" id="h8N-S4-4iD"/>
                             <constraint firstItem="ui3-2C-15m" firstAttribute="top" secondItem="5OO-NX-pgZ" secondAttribute="bottom" constant="50" id="ibC-s2-AOO"/>
                             <constraint firstItem="2co-cE-AJ9" firstAttribute="height" secondItem="s2O-Aw-Bhq" secondAttribute="height" id="mJ4-tm-oqp"/>
-                            <constraint firstItem="5OO-NX-pgZ" firstAttribute="top" secondItem="31y-ri-iSi" secondAttribute="top" constant="150" id="w7x-nN-uUn"/>
+                            <constraint firstItem="5OO-NX-pgZ" firstAttribute="top" secondItem="31y-ri-iSi" secondAttribute="top" constant="180" id="w7x-nN-uUn"/>
                             <constraint firstItem="2co-cE-AJ9" firstAttribute="centerY" secondItem="s2O-Aw-Bhq" secondAttribute="centerY" id="wkL-BE-AS9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="31y-ri-iSi"/>
@@ -276,7 +279,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xQ3-aW-NJr"/>
-        <segue reference="BHI-zd-1pR"/>
+        <segue reference="9vC-h7-Xbp"/>
+        <segue reference="2bv-Nd-kMc"/>
     </inferredMetricsTieBreakers>
 </document>

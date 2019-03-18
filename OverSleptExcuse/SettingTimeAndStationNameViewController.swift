@@ -41,12 +41,19 @@ class SettingViewController: Abstract {
             self.performSegue(withIdentifier: "toMain", sender: nil)
 
     }
-    
-    
-    
+        
+
     }
     
-  
+    @IBAction func clearButton(_ sender: Any) {
+        
+        time_to_leave_home.text! = ""
+        time_to_nearest_station.text! = ""
+        nearest_station_name.text! = ""
+        desitination_station_name.text! = ""
+        
+    }
+    
     func inputCheck() -> (Bool) {
         
         var ret = true
