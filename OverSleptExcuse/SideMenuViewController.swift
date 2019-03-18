@@ -73,7 +73,12 @@ class SideMenuViewController: Abstract {
     
 
     @IBAction func toSettingButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "toSetting", sender: nil)
+        self.performSegue(withIdentifier: "toTimeAndStationName", sender: nil)
+    }
+    
+    
+    @IBAction func toExcuseButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "toExcuse", sender: nil)
     }
     
 }

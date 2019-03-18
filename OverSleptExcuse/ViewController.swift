@@ -14,7 +14,7 @@ class ViewController: Abstract {
         isExists = userDefault.bool(forKey: "isExists")
         
         if !isExists {
-            self.performSegue(withIdentifier: "toSetting", sender: nil)
+            self.performSegue(withIdentifier: "toTimeAndStationName", sender: nil)
         }
         
     }

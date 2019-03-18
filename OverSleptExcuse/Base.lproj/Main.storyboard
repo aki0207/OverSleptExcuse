@@ -21,7 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="vVL-tw-7fp" kind="presentation" identifier="toSetting" id="9vC-h7-Xbp"/>
+                        <segue destination="vVL-tw-7fp" kind="presentation" identifier="toTimeAndStationName" id="9vC-h7-Xbp"/>
                         <segue destination="NXC-zd-Al3" kind="presentation" identifier="toSideMenu" modalTransitionStyle="crossDissolve" id="2bv-Nd-kMc"/>
                     </connections>
                 </viewController>
@@ -43,18 +43,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0a-I5-1v4">
                                         <rect key="frame" x="24" y="110" width="192" height="30"/>
                                         <color key="backgroundColor" red="0.25261374580000001" green="1" blue="0.12671295369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="設定画面へ"/>
+                                        <state key="normal" title="所要時間,駅名設定へ"/>
                                         <connections>
                                             <action selector="toSettingButton:" destination="NXC-zd-Al3" eventType="touchUpInside" id="me1-3Y-m8l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-dH-Ic3">
+                                        <rect key="frame" x="24" y="240" width="192" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="言い訳設定へ"/>
+                                        <connections>
+                                            <action selector="toExcuseButton:" destination="NXC-zd-Al3" eventType="touchDown" id="RDl-4T-fxp"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="EUd-dH-Ic3" firstAttribute="top" secondItem="x0a-I5-1v4" secondAttribute="bottom" constant="100" id="AMa-aY-WRc"/>
                                     <constraint firstItem="x0a-I5-1v4" firstAttribute="width" secondItem="RfQ-xh-fgS" secondAttribute="width" multiplier="0.8" id="D2S-JA-aKP"/>
                                     <constraint firstItem="x0a-I5-1v4" firstAttribute="top" secondItem="RfQ-xh-fgS" secondAttribute="top" constant="110" id="DJK-0F-rPh"/>
                                     <constraint firstItem="x0a-I5-1v4" firstAttribute="centerX" secondItem="RfQ-xh-fgS" secondAttribute="centerX" id="Rir-Xl-F8p"/>
                                     <constraint firstAttribute="width" constant="240" id="Zpz-xA-36m"/>
+                                    <constraint firstItem="EUd-dH-Ic3" firstAttribute="height" secondItem="x0a-I5-1v4" secondAttribute="height" id="bfe-X3-Umf"/>
+                                    <constraint firstItem="EUd-dH-Ic3" firstAttribute="width" secondItem="x0a-I5-1v4" secondAttribute="width" id="bvP-ow-C3r"/>
+                                    <constraint firstItem="EUd-dH-Ic3" firstAttribute="centerX" secondItem="RfQ-xh-fgS" secondAttribute="centerX" id="dKZ-zQ-I2a"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -68,7 +80,8 @@
                     </view>
                     <connections>
                         <outlet property="menuView" destination="RfQ-xh-fgS" id="0IC-OI-trB"/>
-                        <segue destination="vVL-tw-7fp" kind="presentation" identifier="toSetting" id="xQ3-aW-NJr"/>
+                        <segue destination="vVL-tw-7fp" kind="presentation" identifier="toTimeAndStationName" id="xQ3-aW-NJr"/>
+                        <segue destination="tql-La-36s" kind="presentation" identifier="toExcuse" id="huX-K9-HXf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qJ-CB-XMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,12 +180,99 @@
                         <outlet property="time_to_leave_home" destination="5OO-NX-pgZ" id="6nq-Sq-gLu"/>
                         <outlet property="time_to_nearest_station" destination="ui3-2C-15m" id="YQ8-7x-Txf"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toMain" id="evS-uE-4zb"/>
-                        <segue destination="NXC-zd-Al3" kind="presentation" identifier="toSideMenu" id="BHI-zd-1pR"/>
+                        <segue destination="NXC-zd-Al3" kind="presentation" identifier="toSideMenu" modalTransitionStyle="crossDissolve" id="BHI-zd-1pR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1f2-dk-cBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444" y="144.3778110944528"/>
+            <point key="canvasLocation" x="599" y="144"/>
+        </scene>
+        <!--Setting Excuse View Controller-->
+        <scene sceneID="9CB-lz-rzv">
+            <objects>
+                <viewController id="tql-La-36s" customClass="SettingExcuseViewController" customModule="OverSleptExcuse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F0j-YW-bj2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M6A-5n-Qqa">
+                                <rect key="frame" x="37.5" y="200" width="300" height="267"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gs6-Oa-FWr">
+                                <rect key="frame" x="56.5" y="100" width="262.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpk-3z-zYj">
+                                <rect key="frame" x="20" y="557" width="157.5" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="クリア"/>
+                                <connections>
+                                    <action selector="searchButton:" destination="tql-La-36s" eventType="touchDown" id="Udd-g5-ZU5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfl-M9-PuT">
+                                <rect key="frame" x="197.5" y="557" width="157.5" height="30"/>
+                                <color key="backgroundColor" red="0.25261374580000001" green="1" blue="0.12671295369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="設定!"/>
+                                <connections>
+                                    <action selector="settingButton:" destination="tql-La-36s" eventType="touchDown" id="ily-qP-ryq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGM-wY-vvY">
+                                <rect key="frame" x="56.5" y="150" width="262.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLX-yc-eLD">
+                                <rect key="frame" x="56.5" y="502" width="262.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.15429189069999999" blue="0.16939550780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HLX-yc-eLD" firstAttribute="width" secondItem="gs6-Oa-FWr" secondAttribute="width" id="3KU-2y-Msf"/>
+                            <constraint firstItem="dfl-M9-PuT" firstAttribute="height" secondItem="Lpk-3z-zYj" secondAttribute="height" id="6Sk-1r-vjx"/>
+                            <constraint firstItem="dfl-M9-PuT" firstAttribute="centerY" secondItem="Lpk-3z-zYj" secondAttribute="centerY" id="9rv-xK-waZ"/>
+                            <constraint firstItem="uoe-tK-lXO" firstAttribute="bottom" secondItem="Lpk-3z-zYj" secondAttribute="bottom" constant="80" id="BBJ-GE-pxb"/>
+                            <constraint firstItem="gs6-Oa-FWr" firstAttribute="centerX" secondItem="F0j-YW-bj2" secondAttribute="centerX" id="Fc7-VQ-Rwb"/>
+                            <constraint firstItem="HLX-yc-eLD" firstAttribute="height" secondItem="JGM-wY-vvY" secondAttribute="height" id="Kwx-1k-ehx"/>
+                            <constraint firstItem="M6A-5n-Qqa" firstAttribute="centerX" secondItem="F0j-YW-bj2" secondAttribute="centerX" id="MXH-N9-XOc"/>
+                            <constraint firstItem="dfl-M9-PuT" firstAttribute="width" secondItem="Lpk-3z-zYj" secondAttribute="width" id="O0R-k2-zl0"/>
+                            <constraint firstItem="M6A-5n-Qqa" firstAttribute="width" secondItem="uoe-tK-lXO" secondAttribute="width" multiplier="0.8" id="RpN-tE-2dE"/>
+                            <constraint firstItem="Lpk-3z-zYj" firstAttribute="leading" secondItem="uoe-tK-lXO" secondAttribute="leading" constant="20" id="SFi-LL-pCY"/>
+                            <constraint firstItem="JGM-wY-vvY" firstAttribute="height" secondItem="gs6-Oa-FWr" secondAttribute="height" id="Uv1-Oa-5u5"/>
+                            <constraint firstItem="gs6-Oa-FWr" firstAttribute="width" secondItem="uoe-tK-lXO" secondAttribute="width" multiplier="0.7" id="W5t-d7-ePq"/>
+                            <constraint firstItem="HLX-yc-eLD" firstAttribute="centerX" secondItem="F0j-YW-bj2" secondAttribute="centerX" id="WPg-vN-gIB"/>
+                            <constraint firstItem="dfl-M9-PuT" firstAttribute="leading" secondItem="Lpk-3z-zYj" secondAttribute="trailing" constant="20" id="a4G-pL-b18"/>
+                            <constraint firstItem="HLX-yc-eLD" firstAttribute="top" secondItem="M6A-5n-Qqa" secondAttribute="bottom" constant="35" id="eT4-On-Sws"/>
+                            <constraint firstItem="JGM-wY-vvY" firstAttribute="centerX" secondItem="F0j-YW-bj2" secondAttribute="centerX" id="hun-ya-eQ3"/>
+                            <constraint firstItem="M6A-5n-Qqa" firstAttribute="bottom" secondItem="uoe-tK-lXO" secondAttribute="bottom" constant="-200" id="kbr-fW-tCC"/>
+                            <constraint firstItem="gs6-Oa-FWr" firstAttribute="top" secondItem="uoe-tK-lXO" secondAttribute="top" constant="80" id="mAj-1a-nG0"/>
+                            <constraint firstItem="JGM-wY-vvY" firstAttribute="width" secondItem="gs6-Oa-FWr" secondAttribute="width" id="pzy-yz-Txg"/>
+                            <constraint firstItem="uoe-tK-lXO" firstAttribute="trailing" secondItem="dfl-M9-PuT" secondAttribute="trailing" constant="20" id="tR5-Sg-OFK"/>
+                            <constraint firstItem="M6A-5n-Qqa" firstAttribute="top" secondItem="gs6-Oa-FWr" secondAttribute="top" constant="100" id="ySQ-ig-iZx"/>
+                            <constraint firstItem="JGM-wY-vvY" firstAttribute="top" secondItem="gs6-Oa-FWr" secondAttribute="bottom" constant="20" id="zqm-jJ-y72"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uoe-tK-lXO"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainTextErrorMessageLabel" destination="HLX-yc-eLD" id="vaY-yP-QWn"/>
+                        <outlet property="mainTextTextField" destination="M6A-5n-Qqa" id="5cB-dr-w2y"/>
+                        <outlet property="titileErrorMessageLabel" destination="JGM-wY-vvY" id="8BQ-Sc-r4l"/>
+                        <outlet property="titleTextField" destination="gs6-Oa-FWr" id="dPa-iR-gDK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJI-8x-zuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077.5999999999999" y="868.51574212893559"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

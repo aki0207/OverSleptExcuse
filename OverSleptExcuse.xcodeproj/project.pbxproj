@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16AB5DA5D18CE43740CDADA8 /* Pods_OverSleptExcuseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC351E21566153F2A781CA4 /* Pods_OverSleptExcuseTests.framework */; };
 		CF0B8FD9223DBFDC008BA07C /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */; };
 		CF0B8FDD223DC7CE008BA07C /* side_menu_open_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF0B8FDC223DC7CE008BA07C /* side_menu_open_icon.png */; };
 		CF999B9B2238EE6300423B5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999B9A2238EE6300423B5C /* AppDelegate.swift */; };
@@ -16,9 +17,13 @@
 		CF999BA52238EE7100423B5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF999BA32238EE7100423B5C /* LaunchScreen.storyboard */; };
 		CF999BB02238EE7100423B5C /* OverSleptExcuseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999BAF2238EE7100423B5C /* OverSleptExcuseTests.swift */; };
 		CF999BBB2238EE7100423B5C /* OverSleptExcuseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999BBA2238EE7100423B5C /* OverSleptExcuseUITests.swift */; };
-		CF999BC92238FC4D00423B5C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999BC82238FC4D00423B5C /* SettingViewController.swift */; };
+		CF999BC92238FC4D00423B5C /* SettingTimeAndStationNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999BC82238FC4D00423B5C /* SettingTimeAndStationNameViewController.swift */; };
 		CF999BCC2238FCA600423B5C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999BCB2238FCA600423B5C /* String.swift */; };
+		CFAAE536223E289100973A85 /* SettingExcuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAE535223E289100973A85 /* SettingExcuseViewController.swift */; };
+		CFAAE538223E3BFE00973A85 /* Excuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAAE537223E3BFE00973A85 /* Excuse.swift */; };
 		CFBD5878223A48E400F5EA1A /* Abstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBD5877223A48E400F5EA1A /* Abstract.swift */; };
+		D7662FDF1AEAB5E8F5311404 /* Pods_OverSleptExcuse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF117237639F4A8450A500E8 /* Pods_OverSleptExcuse.framework */; };
+		E6818CAC51F4F4887BF4EF9D /* Pods_OverSleptExcuseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59A74122988E1A841A4A700 /* Pods_OverSleptExcuseUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		165ED33BB670BB40C060E21B /* Pods-OverSleptExcuseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverSleptExcuseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OverSleptExcuseUITests/Pods-OverSleptExcuseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2646B11F96B093011AC949AE /* Pods-OverSleptExcuseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverSleptExcuseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OverSleptExcuseTests/Pods-OverSleptExcuseTests.release.xcconfig"; sourceTree = "<group>"; };
+		2E12B5B96BC9EAFD9960C9E0 /* Pods-OverSleptExcuseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverSleptExcuseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OverSleptExcuseTests/Pods-OverSleptExcuseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		45FF4DA8795941B259246ACE /* Pods-OverSleptExcuse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverSleptExcuse.release.xcconfig"; path = "Pods/Target Support Files/Pods-OverSleptExcuse/Pods-OverSleptExcuse.release.xcconfig"; sourceTree = "<group>"; };
+		95EF13DBC7132AD70FCA7598 /* Pods-OverSleptExcuseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverSleptExcuseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OverSleptExcuseUITests/Pods-OverSleptExcuseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		CF0B8FDC223DC7CE008BA07C /* side_menu_open_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = side_menu_open_icon.png; path = ../../../side_menu_open_icon.png; sourceTree = "<group>"; };
+		CF117237639F4A8450A500E8 /* Pods_OverSleptExcuse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OverSleptExcuse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF999B972238EE6300423B5C /* OverSleptExcuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OverSleptExcuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF999B9A2238EE6300423B5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF999B9C2238EE6300423B5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,9 +65,14 @@
 		CF999BB62238EE7100423B5C /* OverSleptExcuseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OverSleptExcuseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF999BBA2238EE7100423B5C /* OverSleptExcuseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverSleptExcuseUITests.swift; sourceTree = "<group>"; };
 		CF999BBC2238EE7100423B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF999BC82238FC4D00423B5C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		CF999BC82238FC4D00423B5C /* SettingTimeAndStationNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTimeAndStationNameViewController.swift; sourceTree = "<group>"; };
 		CF999BCB2238FCA600423B5C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CFAAE535223E289100973A85 /* SettingExcuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingExcuseViewController.swift; sourceTree = "<group>"; };
+		CFAAE537223E3BFE00973A85 /* Excuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excuse.swift; sourceTree = "<group>"; };
 		CFBD5877223A48E400F5EA1A /* Abstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Abstract.swift; sourceTree = "<group>"; };
+		D59A74122988E1A841A4A700 /* Pods_OverSleptExcuseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OverSleptExcuseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0728812EA9B80412DD3532 /* Pods-OverSleptExcuse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverSleptExcuse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OverSleptExcuse/Pods-OverSleptExcuse.debug.xcconfig"; sourceTree = "<group>"; };
+		FCC351E21566153F2A781CA4 /* Pods_OverSleptExcuseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OverSleptExcuseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7662FDF1AEAB5E8F5311404 /* Pods_OverSleptExcuse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AB5DA5D18CE43740CDADA8 /* Pods_OverSleptExcuseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +96,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6818CAC51F4F4887BF4EF9D /* Pods_OverSleptExcuseUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D0257142D347C80D97EBFB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF117237639F4A8450A500E8 /* Pods_OverSleptExcuse.framework */,
+				FCC351E21566153F2A781CA4 /* Pods_OverSleptExcuseTests.framework */,
+				D59A74122988E1A841A4A700 /* Pods_OverSleptExcuseUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8706A098F6137C495F7EB9E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA0728812EA9B80412DD3532 /* Pods-OverSleptExcuse.debug.xcconfig */,
+				45FF4DA8795941B259246ACE /* Pods-OverSleptExcuse.release.xcconfig */,
+				2E12B5B96BC9EAFD9960C9E0 /* Pods-OverSleptExcuseTests.debug.xcconfig */,
+				2646B11F96B093011AC949AE /* Pods-OverSleptExcuseTests.release.xcconfig */,
+				95EF13DBC7132AD70FCA7598 /* Pods-OverSleptExcuseUITests.debug.xcconfig */,
+				165ED33BB670BB40C060E21B /* Pods-OverSleptExcuseUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CF0B8FDB223DC75C008BA07C /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +141,8 @@
 				CF999BAE2238EE7100423B5C /* OverSleptExcuseTests */,
 				CF999BB92238EE7100423B5C /* OverSleptExcuseUITests */,
 				CF999B982238EE6300423B5C /* Products */,
+				8706A098F6137C495F7EB9E7 /* Pods */,
+				6D0257142D347C80D97EBFB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,12 +162,14 @@
 				CF0B8FDB223DC75C008BA07C /* Images */,
 				CF999BCA2238FC8400423B5C /* Extension */,
 				CF999B9A2238EE6300423B5C /* AppDelegate.swift */,
+				CFAAE537223E3BFE00973A85 /* Excuse.swift */,
 				CF999B9C2238EE6300423B5C /* ViewController.swift */,
 				CF999B9E2238EE6300423B5C /* Main.storyboard */,
 				CF999BA12238EE7100423B5C /* Assets.xcassets */,
 				CF999BA32238EE7100423B5C /* LaunchScreen.storyboard */,
 				CF999BA62238EE7100423B5C /* Info.plist */,
-				CF999BC82238FC4D00423B5C /* SettingViewController.swift */,
+				CF999BC82238FC4D00423B5C /* SettingTimeAndStationNameViewController.swift */,
+				CFAAE535223E289100973A85 /* SettingExcuseViewController.swift */,
 				CFBD5877223A48E400F5EA1A /* Abstract.swift */,
 				CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */,
 			);
@@ -163,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF999BBF2238EE7100423B5C /* Build configuration list for PBXNativeTarget "OverSleptExcuse" */;
 			buildPhases = (
+				CAAD9C8ACF4114CD0AB8A75D /* [CP] Check Pods Manifest.lock */,
 				CF999B932238EE6300423B5C /* Sources */,
 				CF999B942238EE6300423B5C /* Frameworks */,
 				CF999B952238EE6300423B5C /* Resources */,
+				3500A3D890E25A9039C67813 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF999BC22238EE7100423B5C /* Build configuration list for PBXNativeTarget "OverSleptExcuseTests" */;
 			buildPhases = (
+				9E92C45BE07D51C3A65ADBD3 /* [CP] Check Pods Manifest.lock */,
 				CF999BA72238EE7100423B5C /* Sources */,
 				CF999BA82238EE7100423B5C /* Frameworks */,
 				CF999BA92238EE7100423B5C /* Resources */,
@@ -198,6 +247,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF999BC52238EE7100423B5C /* Build configuration list for PBXNativeTarget "OverSleptExcuseUITests" */;
 			buildPhases = (
+				C4A088A54200A07A9910AAA8 /* [CP] Check Pods Manifest.lock */,
 				CF999BB22238EE7100423B5C /* Sources */,
 				CF999BB32238EE7100423B5C /* Frameworks */,
 				CF999BB42238EE7100423B5C /* Resources */,
@@ -283,6 +333,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3500A3D890E25A9039C67813 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OverSleptExcuse/Pods-OverSleptExcuse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OverSleptExcuse/Pods-OverSleptExcuse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E92C45BE07D51C3A65ADBD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OverSleptExcuseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4A088A54200A07A9910AAA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OverSleptExcuseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAAD9C8ACF4114CD0AB8A75D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OverSleptExcuse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF999B932238EE6300423B5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -290,10 +433,12 @@
 			files = (
 				CF999B9D2238EE6300423B5C /* ViewController.swift in Sources */,
 				CF999B9B2238EE6300423B5C /* AppDelegate.swift in Sources */,
+				CFAAE536223E289100973A85 /* SettingExcuseViewController.swift in Sources */,
 				CFBD5878223A48E400F5EA1A /* Abstract.swift in Sources */,
+				CFAAE538223E3BFE00973A85 /* Excuse.swift in Sources */,
 				CF999BCC2238FCA600423B5C /* String.swift in Sources */,
 				CF0B8FD9223DBFDC008BA07C /* SideMenuViewController.swift in Sources */,
-				CF999BC92238FC4D00423B5C /* SettingViewController.swift in Sources */,
+				CF999BC92238FC4D00423B5C /* SettingTimeAndStationNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +611,7 @@
 		};
 		CF999BC02238EE7100423B5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA0728812EA9B80412DD3532 /* Pods-OverSleptExcuse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -483,6 +629,7 @@
 		};
 		CF999BC12238EE7100423B5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45FF4DA8795941B259246ACE /* Pods-OverSleptExcuse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -500,6 +647,7 @@
 		};
 		CF999BC32238EE7100423B5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E12B5B96BC9EAFD9960C9E0 /* Pods-OverSleptExcuseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +668,7 @@
 		};
 		CF999BC42238EE7100423B5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2646B11F96B093011AC949AE /* Pods-OverSleptExcuseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +689,7 @@
 		};
 		CF999BC62238EE7100423B5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95EF13DBC7132AD70FCA7598 /* Pods-OverSleptExcuseUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -559,6 +709,7 @@
 		};
 		CF999BC72238EE7100423B5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 165ED33BB670BB40C060E21B /* Pods-OverSleptExcuseUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
