@@ -28,39 +28,21 @@ class SettingExcuseViewController: UIViewController {
             return
         }
         
-        //データの取得をしてみて、なければ追加、あれば更新
+        
         let realm = try! Realm()
         var saved_excuse_data = realm.objects(Excuse.self)
         
-        if saved_excuse_data.count == 0 {
-            
-            let excuse = Excuse()
-            excuse.title = inputed_title
-            excuse.mainText = inputed_main_text
-            
-            
-            // 追加
-            try! realm.write {
-                realm.add(excuse)
-            }
-            
-            print("追加しました")
-            
-        } else {
-            
-            
-            if let excuse = saved_excuse_data.first {
-                
-                // 更新
-                try! realm.write() {
-                    excuse.title = inputed_title
-                    excuse.mainText = inputed_main_text
-                }
-                
-                print("更新しました")
-                
-            }
+
+        let excuse = Excuse()
+        excuse.title = inputed_title
+        excuse.mainText = inputed_main_text
+        
+        // 追加
+        try! realm.write {
+            realm.add(excuse)
         }
+        
+        print("追加しました")
         
     }
     

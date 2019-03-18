@@ -1,10 +1,25 @@
 import UIKit
+import RealmSwift
 
 
-class ViewController: Abstract {
+class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
     
     let userDefault = UserDefaults.standard
     var isExists = false
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var mainTextField: UITextView!
+    
+   
+    
+
+//    let excuseTitleList = [
+//        "りんご","バナナ","ぶどう","もも",
+//        "みかん","パイナップル","マンゴー","レモン",
+//        "キウイ","メロン","スイカ","ゴリラ"
+//    ]
+    
+    var excuseTitleList: [String] = []
+
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -25,6 +40,22 @@ class ViewController: Abstract {
         
         super.createHeader(pTitle: "結果画面")
         super.createSideMenu()
+        
+        // Delegate設定
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        let realm = try! Realm()
+        var saved_excuse_data = realm.objects(Excuse.self)
+
+        
+        for excuse in saved_excuse_data {
+            excuseTitleList.append(excuse.title)
+        }
+        
+       
+        
+        
         
         
         
@@ -126,6 +157,35 @@ class ViewController: Abstract {
             }
         }
         task.resume()
+    }
+    
+    // UIPickerViewの列の数
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // UIPickerViewの行数、リストの数
+    func pickerView(_ pickerView: UIPickerView,
+                    numberOfRowsInComponent component: Int) -> Int {
+        return excuseTitleList.count
+    }
+    
+    // UIPickerViewの最初の表示
+    func pickerView(_ pickerView: UIPickerView,
+                    titleForRow row: Int,
+                    forComponent component: Int) -> String? {
+        
+        mainTextField.text = excuseTitleList[row]
+        return excuseTitleList[row]
+    }
+    
+    // UIPickerViewのRowが選択された時の挙動
+    func pickerView(_ pickerView: UIPickerView,
+                    didSelectRow row: Int,
+                    inComponent component: Int) {
+        
+        mainTextField.text = excuseTitleList[row]
+        
     }
 }
 
