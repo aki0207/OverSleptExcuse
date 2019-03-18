@@ -8,17 +8,8 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
     var isExists = false
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var mainTextField: UITextView!
-    
-   
-    
-
-//    let excuseTitleList = [
-//        "りんご","バナナ","ぶどう","もも",
-//        "みかん","パイナップル","マンゴー","レモン",
-//        "キウイ","メロン","スイカ","ゴリラ"
-//    ]
-    
     var excuseTitleList: [String] = []
+    var db_data_evacuation: Dictionary = [String:String]()
 
     
     
@@ -45,24 +36,20 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
         pickerView.delegate = self
         pickerView.dataSource = self
         
+        //DBにあるタイトルを選択肢に突っ込む
         let realm = try! Realm()
-        var saved_excuse_data = realm.objects(Excuse.self)
+        let saved_excuse_data = realm.objects(Excuse.self)
 
-        
         for excuse in saved_excuse_data {
             excuseTitleList.append(excuse.title)
+            db_data_evacuation[excuse.title] = excuse.mainText
         }
         
        
-        
-        
-        
-        
-        
-       
+
         let time_to_leave_home = userDefault.string(forKey: "timeToLeaveHome")
         let time_to_nearest_station = userDefault.string(forKey: "timeToNearestStation")
-        var nearest_station_name = userDefault.string(forKey: "nearestStationName")
+        let nearest_station_name = userDefault.string(forKey: "nearestStationName")
         let desitination_station_name = userDefault.string(forKey: "desitinationStationName")
         
         //現在の日時
@@ -94,7 +81,7 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
         
         
         //60分を超えている場合hourにプラスしてやる必要がある
-        //resultが82だった場合、hour + 1 でresultが22になる
+        //例えばresultが82だった場合、hour + 1 でresultが22になる
         var over_num:Int = 0
         var add_hour:Int = 0
         
@@ -175,7 +162,7 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
         
-        mainTextField.text = excuseTitleList[row]
+        mainTextField.text = db_data_evacuation[excuseTitleList[row]]
         return excuseTitleList[row]
     }
     
@@ -184,7 +171,7 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
                     didSelectRow row: Int,
                     inComponent component: Int) {
         
-        mainTextField.text = excuseTitleList[row]
+        mainTextField.text = db_data_evacuation[excuseTitleList[row]]
         
     }
 }
