@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16AB5DA5D18CE43740CDADA8 /* Pods_OverSleptExcuseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC351E21566153F2A781CA4 /* Pods_OverSleptExcuseTests.framework */; };
+		CF0663DB22447057000675CF /* TimeToUseForUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0663DA22447057000675CF /* TimeToUseForUrl.swift */; };
 		CF0B8FD9223DBFDC008BA07C /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */; };
 		CF0B8FDD223DC7CE008BA07C /* side_menu_open_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF0B8FDC223DC7CE008BA07C /* side_menu_open_icon.png */; };
 		CF999B9B2238EE6300423B5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999B9A2238EE6300423B5C /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		2E12B5B96BC9EAFD9960C9E0 /* Pods-OverSleptExcuseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverSleptExcuseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OverSleptExcuseTests/Pods-OverSleptExcuseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		45FF4DA8795941B259246ACE /* Pods-OverSleptExcuse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverSleptExcuse.release.xcconfig"; path = "Pods/Target Support Files/Pods-OverSleptExcuse/Pods-OverSleptExcuse.release.xcconfig"; sourceTree = "<group>"; };
 		95EF13DBC7132AD70FCA7598 /* Pods-OverSleptExcuseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OverSleptExcuseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OverSleptExcuseUITests/Pods-OverSleptExcuseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF0663DA22447057000675CF /* TimeToUseForUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeToUseForUrl.swift; sourceTree = "<group>"; };
 		CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		CF0B8FDC223DC7CE008BA07C /* side_menu_open_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = side_menu_open_icon.png; path = ../../../side_menu_open_icon.png; sourceTree = "<group>"; };
 		CF117237639F4A8450A500E8 /* Pods_OverSleptExcuse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OverSleptExcuse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 				CFAAE535223E289100973A85 /* SettingExcuseViewController.swift */,
 				CFBD5877223A48E400F5EA1A /* Abstract.swift */,
 				CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */,
+				CF0663DA22447057000675CF /* TimeToUseForUrl.swift */,
 			);
 			path = OverSleptExcuse;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				CFBD5878223A48E400F5EA1A /* Abstract.swift in Sources */,
 				CFAAE538223E3BFE00973A85 /* Excuse.swift in Sources */,
 				CF999BCC2238FCA600423B5C /* String.swift in Sources */,
+				CF0663DB22447057000675CF /* TimeToUseForUrl.swift in Sources */,
 				CF0B8FD9223DBFDC008BA07C /* SideMenuViewController.swift in Sources */,
 				CF999BC92238FC4D00423B5C /* SettingTimeAndStationNameViewController.swift in Sources */,
 			);
