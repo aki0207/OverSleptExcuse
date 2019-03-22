@@ -8,6 +8,8 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
     var isExists = false
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var mainTextField: UITextView!
+    
+    
     var excuseTitleList: [String] = []
     var db_data_evacuation: Dictionary = [String:String]()
     
@@ -45,13 +47,12 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
         }
         
 
-        
         //URLにセットするパラメータの時間を取得
         var parametersUsedForUrl = TimeToUseForUrl()
         parametersUsedForUrl = parametersUsedForUrl.getCurrentDateAndTime(pTimeInstance: parametersUsedForUrl)
         parametersUsedForUrl = parametersUsedForUrl.addTimeToLeaveHomeAndTimeToNearestStation(pTimeInstance: parametersUsedForUrl)
         
-        
+        //URLにセットするパラメータの駅名を取得
         var nearest_station_name:String = ""
         var desitination_station_name = ""
         

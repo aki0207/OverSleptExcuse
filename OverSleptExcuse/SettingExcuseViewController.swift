@@ -1,7 +1,7 @@
 import UIKit
 import RealmSwift
 
-class SettingExcuseViewController: UIViewController {
+class SettingExcuseViewController: UIViewController,UITextViewDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var mainTextTextField: UITextView!
@@ -9,9 +9,12 @@ class SettingExcuseViewController: UIViewController {
     @IBOutlet weak var mainTextErrorMessageLabel: UILabel!
     
     
+    //@IBOutlet weak var placeholderLabel: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainTextTextField.delegate = self
         
     }
     
@@ -92,5 +95,18 @@ class SettingExcuseViewController: UIViewController {
         return ret
         
     }
+    
+//    //フォーカスが当たったときはプレースホルダー非表示
+//    func textViewDidBeginEditing(_ textView: UITextView) {
+//        placeholderLabel.isHidden = true
+//    }
+//
+//
+//    //textviewからフォーカスが外れて、TextViewが空だったらLabelを再び表示
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//        if(textView.text.isEmpty){
+//            placeholderLabel.isHidden = false
+//        }
+//    }
     
 }
