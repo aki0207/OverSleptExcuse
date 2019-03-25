@@ -23,7 +23,6 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
         if !isExists {
             self.performSegue(withIdentifier: "toTimeAndStationName", sender: nil)
         }
-        
     }
     
     
@@ -37,16 +36,7 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
         pickerView.delegate = self
         pickerView.dataSource = self
         
-        //DBにあるタイトルを選択肢に突っ込む
-        let realm = try! Realm()
-        let saved_excuse_data = realm.objects(Excuse.self)
         
-        for excuse in saved_excuse_data {
-            excuseTitleList.append(excuse.title)
-            db_data_evacuation[excuse.title] = excuse.mainText
-        }
-        
-
         //URLにセットするパラメータの時間を取得
         var parametersUsedForUrl = TimeToUseForUrl()
         parametersUsedForUrl = parametersUsedForUrl.getCurrentDateAndTime(pTimeInstance: parametersUsedForUrl)
@@ -74,8 +64,13 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
         
         let url = URL(string: text);
         let session = URLSession.shared
+        let condition = NSCondition()
+        
+        
         let task = session.dataTask(with:url!) { (data, response, error) -> Void in
             if let urlContent = data {
+                
+                condition.lock()
                 let webContent = String(data: urlContent, encoding: String.Encoding.utf8)
                 if let test = webContent?.range(of:"→<span class=\"mark\">") {
                     //if let test = webContent?.range(of:"八戸ノ里") {
@@ -84,12 +79,49 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
                     let target_charctor = webContent?.distance(from: (webContent?.startIndex)!, to: test.lowerBound)
                     let arrayval_time = webContent?[(webContent?.index(webContent!.startIndex, offsetBy: target_charctor! + 20))!..<(webContent?.index((webContent?.startIndex)!, offsetBy: target_charctor! + 25))!]
                     
+                    
+                    let arrayval_hours:String = String(arrayval_time!.prefix(2))
+                    let arrayval_minutes:String = String(arrayval_time!.suffix(2))
+                    
+                    //DBにあるタイトルを選択肢に突っ込む
+                    let realm = try! Realm()
+                    let saved_excuse_data = realm.objects(Excuse.self)
+                    
+                    //まずデフォルト文追加
+                    self.excuseTitleList.append("寝坊:デフォルト")
+                    self.db_data_evacuation["寝坊:デフォルト"] = "おはようございます。\n寝坊をしてしまったため到着が遅れます。\n\(arrayval_hours)時\(arrayval_minutes)分に到着予定です。\n申し訳ございませんがよろしくお願い致します"
+                    
+                    
+                    for excuse in saved_excuse_data {
+                        self.excuseTitleList.append(excuse.title)
+                        self.db_data_evacuation[excuse.title] = self.insertTime(pMainText: excuse.mainText, pHours: arrayval_hours, pMinutes: arrayval_minutes)
+                    }
+                    
+                    
+                    condition.signal()
+                    condition.unlock()
+                    
                     print(arrayval_time as Any)
                 }
             }
         }
+        condition.lock()
         task.resume()
+        condition.wait()
+        condition.unlock()
+        //URLしばいて通信処理完了後こいつが呼ばれる
+        self.pickerView.reloadAllComponents()
+        
     }
+    
+    
+    @IBAction func sendButton(_ sender: Any) {
+        
+        var sendMessage = mainTextField.text!
+        
+    }
+    
+    
     
     // UIPickerViewの列の数
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -118,6 +150,21 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
         
         mainTextField.text = db_data_evacuation[excuseTitleList[row]]
         
+    }
+    
+    //本文に到着時間を挿入
+    func insertTime(pMainText: String, pHours: String, pMinutes: String) -> String {
+        
+        //引数をletからvarに変換
+        var pMainText = pMainText
+        if let range = pMainText.range(of: "◯") {
+            pMainText.replaceSubrange(range, with: pHours)
+        }
+        
+        if let range = pMainText.range(of: "△") {
+            pMainText.replaceSubrange(range, with: pMinutes)
+        }
+        return pMainText
     }
 }
 

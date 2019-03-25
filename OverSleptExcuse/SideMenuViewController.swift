@@ -80,5 +80,10 @@ class SideMenuViewController: Abstract {
     @IBAction func toExcuseButton(_ sender: Any) {
         self.performSegue(withIdentifier: "toExcuse", sender: nil)
     }
+
+    
+    @IBAction func toChatSetting(_ sender: Any) {
+        self.performSegue(withIdentifier: "toChat", sender: nil)
+    }
     
 }
