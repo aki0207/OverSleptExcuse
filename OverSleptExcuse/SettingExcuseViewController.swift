@@ -7,7 +7,7 @@ class SettingExcuseViewController: UIViewController,UITextViewDelegate {
     @IBOutlet weak var mainTextTextField: UITextView!
     @IBOutlet weak var titileErrorMessageLabel: UILabel!
     @IBOutlet weak var mainTextErrorMessageLabel: UILabel!
-    
+    @IBOutlet weak var placeholderLabel: UILabel!
     
     //@IBOutlet weak var placeholderLabel: UITextView!
     
@@ -23,8 +23,8 @@ class SettingExcuseViewController: UIViewController,UITextViewDelegate {
     @IBAction func settingButton(_ sender: Any) {
         
         //入力値取得
-        var inputed_title = titleTextField.text!
-        var inputed_main_text = mainTextTextField.text!
+        let inputed_title = titleTextField.text!
+        let inputed_main_text = mainTextTextField.text!
         
         //入力値チェック
         if !checkInput(pTitle: inputed_title, pMainText: inputed_main_text) {
@@ -53,7 +53,7 @@ class SettingExcuseViewController: UIViewController,UITextViewDelegate {
     @IBAction func searchButton(_ sender: Any) {
         
         let realm = try! Realm()
-        var saved_excuse_data = realm.objects(Excuse.self)
+        let saved_excuse_data = realm.objects(Excuse.self)
         // ためしに名前を表示
         for excuse in saved_excuse_data {
             print("titile: \(excuse.title)")
@@ -96,17 +96,17 @@ class SettingExcuseViewController: UIViewController,UITextViewDelegate {
         
     }
     
-//    //フォーカスが当たったときはプレースホルダー非表示
-//    func textViewDidBeginEditing(_ textView: UITextView) {
-//        placeholderLabel.isHidden = true
-//    }
-//
-//
-//    //textviewからフォーカスが外れて、TextViewが空だったらLabelを再び表示
-//    func textViewDidEndEditing(_ textView: UITextView) {
-//        if(textView.text.isEmpty){
-//            placeholderLabel.isHidden = false
-//        }
-//    }
+    //フォーカスが当たったときはプレースホルダー非表示
+    func textViewDidBeginEditing(_ mainTextTextField: UITextView) {
+        placeholderLabel.isHidden = true
+    }
+
+
+    //textviewからフォーカスが外れて、TextViewが空だったらLabelを再び表示
+    func textViewDidEndEditing(_ mainTextTextField: UITextView) {
+        if(mainTextTextField.text.isEmpty){
+            placeholderLabel.isHidden = false
+        }
+    }
     
 }

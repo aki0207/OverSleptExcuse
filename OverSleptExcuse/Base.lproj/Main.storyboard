@@ -220,14 +220,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M6A-5n-Qqa">
-                                <rect key="frame" x="37.5" y="200" width="300" height="267"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gs6-Oa-FWr">
                                 <rect key="frame" x="56.5" y="100" width="262.5" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -260,6 +255,20 @@
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6A-5n-Qqa">
+                                <rect key="frame" x="37.5" y="200" width="300" height="267"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX5-Yg-YkL">
+                                <rect key="frame" x="37.5" y="200" width="300" height="61"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">本文入力欄です。指定された行に定型文が入力されます。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -276,8 +285,11 @@
                             <constraint firstItem="JGM-wY-vvY" firstAttribute="height" secondItem="gs6-Oa-FWr" secondAttribute="height" id="Uv1-Oa-5u5"/>
                             <constraint firstItem="gs6-Oa-FWr" firstAttribute="width" secondItem="uoe-tK-lXO" secondAttribute="width" multiplier="0.7" id="W5t-d7-ePq"/>
                             <constraint firstItem="HLX-yc-eLD" firstAttribute="centerX" secondItem="F0j-YW-bj2" secondAttribute="centerX" id="WPg-vN-gIB"/>
+                            <constraint firstItem="eX5-Yg-YkL" firstAttribute="centerX" secondItem="M6A-5n-Qqa" secondAttribute="centerX" id="XjT-g8-gDu"/>
+                            <constraint firstItem="eX5-Yg-YkL" firstAttribute="top" secondItem="M6A-5n-Qqa" secondAttribute="top" id="ZJu-w9-1gi"/>
                             <constraint firstItem="dfl-M9-PuT" firstAttribute="leading" secondItem="Lpk-3z-zYj" secondAttribute="trailing" constant="20" id="a4G-pL-b18"/>
                             <constraint firstItem="HLX-yc-eLD" firstAttribute="top" secondItem="M6A-5n-Qqa" secondAttribute="bottom" constant="35" id="eT4-On-Sws"/>
+                            <constraint firstItem="eX5-Yg-YkL" firstAttribute="width" secondItem="M6A-5n-Qqa" secondAttribute="width" id="hbA-C3-eq3"/>
                             <constraint firstItem="JGM-wY-vvY" firstAttribute="centerX" secondItem="F0j-YW-bj2" secondAttribute="centerX" id="hun-ya-eQ3"/>
                             <constraint firstItem="M6A-5n-Qqa" firstAttribute="bottom" secondItem="uoe-tK-lXO" secondAttribute="bottom" constant="-200" id="kbr-fW-tCC"/>
                             <constraint firstItem="gs6-Oa-FWr" firstAttribute="top" secondItem="uoe-tK-lXO" secondAttribute="top" constant="80" id="mAj-1a-nG0"/>
@@ -291,6 +303,7 @@
                     <connections>
                         <outlet property="mainTextErrorMessageLabel" destination="HLX-yc-eLD" id="vaY-yP-QWn"/>
                         <outlet property="mainTextTextField" destination="M6A-5n-Qqa" id="5cB-dr-w2y"/>
+                        <outlet property="placeholderLabel" destination="eX5-Yg-YkL" id="bNS-0D-Qli"/>
                         <outlet property="titileErrorMessageLabel" destination="JGM-wY-vvY" id="8BQ-Sc-r4l"/>
                         <outlet property="titleTextField" destination="gs6-Oa-FWr" id="dPa-iR-gDK"/>
                     </connections>
