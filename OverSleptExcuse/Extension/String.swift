@@ -8,6 +8,12 @@ extension String {
         return NSPredicate(format: "SELF MATCHES %@","^[ぁ-ゞァ-ヾ\u{3005}\u{3007}\u{303b}\u{3400}-\u{9fff}\u{f900}-\u{faff}\u{20000}-\u{2ffff}]+$" ).evaluate(with:self)
     }
     
+    func isAlphanumeric() -> Bool {
+        return NSPredicate(format: "SELF MATCHES %@", "[a-zA-Z0-9]+").evaluate(with: self)
+    }
+    
+    
+    
     // 値が入っているか確認する
     func isInput() -> Bool {
         

@@ -344,18 +344,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYb-9B-JfA">
-                                <rect key="frame" x="166" y="106" width="34" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25261374580000001" green="1" blue="0.12671295369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="api keyを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y45-pG-YYE">
+                                <rect key="frame" x="37.5" y="120" width="300" height="30"/>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="送信先のルームIDを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3g-GK-afi">
+                                <rect key="frame" x="37.5" y="250" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v38-cL-59k">
+                                <rect key="frame" x="20" y="527" width="157.5" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="クリア"/>
+                                <connections>
+                                    <action selector="clearButton:" destination="xXh-KU-0zc" eventType="touchDown" id="76X-bI-7l3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpx-Wv-sxJ">
+                                <rect key="frame" x="197.5" y="527" width="157.5" height="30"/>
+                                <color key="backgroundColor" red="0.25261374580000001" green="1" blue="0.12671295369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="設定！"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="xXh-KU-0zc" eventType="touchDown" id="Hhc-DV-onc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1T-4O-Jd6">
+                                <rect key="frame" x="37.5" y="150" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.15429189069999999" blue="0.16939550780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQm-Lt-F1t">
+                                <rect key="frame" x="37.5" y="280" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.15429189069999999" blue="0.16939550780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tpx-Wv-sxJ" firstAttribute="leading" secondItem="v38-cL-59k" secondAttribute="trailing" constant="20" id="1bv-jg-ybm"/>
+                            <constraint firstItem="U3g-GK-afi" firstAttribute="centerX" secondItem="Y45-pG-YYE" secondAttribute="centerX" id="2hH-bF-rJw"/>
+                            <constraint firstItem="U3g-GK-afi" firstAttribute="width" secondItem="Y45-pG-YYE" secondAttribute="width" id="7P1-WA-myy"/>
+                            <constraint firstItem="oQm-Lt-F1t" firstAttribute="height" secondItem="U3g-GK-afi" secondAttribute="height" id="Aje-Nl-yxj"/>
+                            <constraint firstItem="Y45-pG-YYE" firstAttribute="top" secondItem="rVx-FR-tWI" secondAttribute="top" constant="100" id="GKq-5k-Wnw"/>
+                            <constraint firstItem="v38-cL-59k" firstAttribute="leading" secondItem="rVx-FR-tWI" secondAttribute="leading" constant="20" id="JFT-it-nLB"/>
+                            <constraint firstItem="oQm-Lt-F1t" firstAttribute="width" secondItem="U3g-GK-afi" secondAttribute="width" id="JPY-Ir-DTc"/>
+                            <constraint firstItem="U3g-GK-afi" firstAttribute="top" secondItem="Y45-pG-YYE" secondAttribute="bottom" constant="100" id="O01-K1-cPL"/>
+                            <constraint firstItem="Y45-pG-YYE" firstAttribute="width" secondItem="rVx-FR-tWI" secondAttribute="width" multiplier="0.8" id="TBl-w2-GEO"/>
+                            <constraint firstItem="rVx-FR-tWI" firstAttribute="bottom" secondItem="v38-cL-59k" secondAttribute="bottom" constant="110" id="UvE-Ky-nCR"/>
+                            <constraint firstItem="K1T-4O-Jd6" firstAttribute="centerX" secondItem="Y45-pG-YYE" secondAttribute="centerX" id="V0i-jJ-WYc"/>
+                            <constraint firstItem="U3g-GK-afi" firstAttribute="height" secondItem="Y45-pG-YYE" secondAttribute="height" id="XWx-pO-wmD"/>
+                            <constraint firstItem="oQm-Lt-F1t" firstAttribute="top" secondItem="U3g-GK-afi" secondAttribute="top" constant="30" id="aiN-ph-hJ9"/>
+                            <constraint firstItem="Y45-pG-YYE" firstAttribute="centerX" secondItem="rVx-FR-tWI" secondAttribute="centerX" id="aqP-Y4-ZYX"/>
+                            <constraint firstItem="rVx-FR-tWI" firstAttribute="trailing" secondItem="tpx-Wv-sxJ" secondAttribute="trailing" constant="20" id="azT-ws-CNy"/>
+                            <constraint firstItem="K1T-4O-Jd6" firstAttribute="width" secondItem="Y45-pG-YYE" secondAttribute="width" id="bAf-41-TFh"/>
+                            <constraint firstItem="oQm-Lt-F1t" firstAttribute="centerX" secondItem="U3g-GK-afi" secondAttribute="centerX" id="cZ2-RL-qrg"/>
+                            <constraint firstItem="tpx-Wv-sxJ" firstAttribute="centerY" secondItem="v38-cL-59k" secondAttribute="centerY" id="gz5-Cg-wvz"/>
+                            <constraint firstItem="tpx-Wv-sxJ" firstAttribute="width" secondItem="v38-cL-59k" secondAttribute="width" id="qFl-Qm-Ol2"/>
+                            <constraint firstItem="K1T-4O-Jd6" firstAttribute="height" secondItem="Y45-pG-YYE" secondAttribute="height" id="qfT-l2-Rfk"/>
+                            <constraint firstItem="K1T-4O-Jd6" firstAttribute="top" secondItem="Y45-pG-YYE" secondAttribute="top" constant="30" id="sKd-Qd-gt3"/>
+                            <constraint firstItem="tpx-Wv-sxJ" firstAttribute="height" secondItem="v38-cL-59k" secondAttribute="height" id="t7l-0r-rCW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rVx-FR-tWI"/>
                     </view>
+                    <connections>
+                        <outlet property="apiKeyErrorLabel" destination="K1T-4O-Jd6" id="BJW-W3-TS9"/>
+                        <outlet property="apiKeyLabel" destination="Y45-pG-YYE" id="7KX-jZ-Mkl"/>
+                        <outlet property="apiKeyTextField" destination="Y45-pG-YYE" id="ifw-vV-Tev"/>
+                        <outlet property="destinationRoomNumberErrorLabel" destination="oQm-Lt-F1t" id="2xg-L2-2iE"/>
+                        <outlet property="destinationRoomNumberTextField" destination="U3g-GK-afi" id="Lxz-tJ-Ayx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXT-ZF-VC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
