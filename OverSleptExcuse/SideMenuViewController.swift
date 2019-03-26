@@ -86,4 +86,10 @@ class SideMenuViewController: Abstract {
         self.performSegue(withIdentifier: "toChat", sender: nil)
     }
     
+    
+    @IBAction func toSendMessage(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "toSendMessage", sender: nil)
+    }
+    
 }

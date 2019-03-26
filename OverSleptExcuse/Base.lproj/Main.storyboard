@@ -72,7 +72,7 @@
                                 <rect key="frame" x="0.0" y="80" width="240" height="587"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0a-I5-1v4">
-                                        <rect key="frame" x="24" y="110" width="192" height="30"/>
+                                        <rect key="frame" x="24" y="80" width="192" height="30"/>
                                         <color key="backgroundColor" red="0.25261374580000001" green="1" blue="0.12671295369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="所要時間,駅名設定へ"/>
                                         <connections>
@@ -80,7 +80,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-dH-Ic3">
-                                        <rect key="frame" x="24" y="240" width="192" height="30"/>
+                                        <rect key="frame" x="24" y="210" width="192" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="言い訳設定へ"/>
                                         <connections>
@@ -88,19 +88,29 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-jC-MOS">
-                                        <rect key="frame" x="24" y="370" width="192" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="24" y="340" width="192" height="30"/>
+                                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="チャット設定へ"/>
                                         <connections>
                                             <action selector="toChatSetting:" destination="NXC-zd-Al3" eventType="touchDown" id="t7y-5W-f9Y"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQc-gV-mxc">
+                                        <rect key="frame" x="24" y="470" width="192" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="メッセージ送信へ"/>
+                                        <connections>
+                                            <action selector="toSendMessage:" destination="NXC-zd-Al3" eventType="touchDown" id="Q9q-0C-EvU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="AQc-gV-mxc" firstAttribute="height" secondItem="lvK-jC-MOS" secondAttribute="height" id="0dJ-gH-VIh"/>
                                     <constraint firstItem="EUd-dH-Ic3" firstAttribute="top" secondItem="x0a-I5-1v4" secondAttribute="bottom" constant="100" id="AMa-aY-WRc"/>
                                     <constraint firstItem="x0a-I5-1v4" firstAttribute="width" secondItem="RfQ-xh-fgS" secondAttribute="width" multiplier="0.8" id="D2S-JA-aKP"/>
-                                    <constraint firstItem="x0a-I5-1v4" firstAttribute="top" secondItem="RfQ-xh-fgS" secondAttribute="top" constant="110" id="DJK-0F-rPh"/>
+                                    <constraint firstItem="x0a-I5-1v4" firstAttribute="top" secondItem="RfQ-xh-fgS" secondAttribute="top" constant="80" id="DJK-0F-rPh"/>
+                                    <constraint firstItem="AQc-gV-mxc" firstAttribute="top" secondItem="lvK-jC-MOS" secondAttribute="bottom" constant="100" id="HQu-Bn-2Qz"/>
                                     <constraint firstItem="lvK-jC-MOS" firstAttribute="width" secondItem="EUd-dH-Ic3" secondAttribute="width" id="HqD-2x-7cI"/>
                                     <constraint firstItem="lvK-jC-MOS" firstAttribute="centerX" secondItem="EUd-dH-Ic3" secondAttribute="centerX" id="Q4k-qg-mP2"/>
                                     <constraint firstItem="x0a-I5-1v4" firstAttribute="centerX" secondItem="RfQ-xh-fgS" secondAttribute="centerX" id="Rir-Xl-F8p"/>
@@ -108,7 +118,9 @@
                                     <constraint firstItem="EUd-dH-Ic3" firstAttribute="height" secondItem="x0a-I5-1v4" secondAttribute="height" id="bfe-X3-Umf"/>
                                     <constraint firstItem="EUd-dH-Ic3" firstAttribute="width" secondItem="x0a-I5-1v4" secondAttribute="width" id="bvP-ow-C3r"/>
                                     <constraint firstItem="EUd-dH-Ic3" firstAttribute="centerX" secondItem="RfQ-xh-fgS" secondAttribute="centerX" id="dKZ-zQ-I2a"/>
+                                    <constraint firstItem="AQc-gV-mxc" firstAttribute="centerX" secondItem="lvK-jC-MOS" secondAttribute="centerX" id="i9Y-JU-pE6"/>
                                     <constraint firstItem="lvK-jC-MOS" firstAttribute="top" secondItem="EUd-dH-Ic3" secondAttribute="bottom" constant="100" id="iUc-6p-smq"/>
+                                    <constraint firstItem="AQc-gV-mxc" firstAttribute="width" secondItem="lvK-jC-MOS" secondAttribute="width" id="mmB-Au-oBV"/>
                                     <constraint firstItem="lvK-jC-MOS" firstAttribute="height" secondItem="EUd-dH-Ic3" secondAttribute="height" id="qb6-Rj-GM1"/>
                                 </constraints>
                             </view>
@@ -126,6 +138,7 @@
                         <segue destination="vVL-tw-7fp" kind="presentation" identifier="toTimeAndStationName" id="xQ3-aW-NJr"/>
                         <segue destination="tql-La-36s" kind="presentation" identifier="toExcuse" id="huX-K9-HXf"/>
                         <segue destination="xXh-KU-0zc" kind="presentation" identifier="toChat" id="BCf-me-bDb"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSendMessage" id="4yS-BQ-al9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qJ-CB-XMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -425,7 +438,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9vC-h7-Xbp"/>
+        <segue reference="xQ3-aW-NJr"/>
         <segue reference="2bv-Nd-kMc"/>
+        <segue reference="4yS-BQ-al9"/>
     </inferredMetricsTieBreakers>
 </document>
