@@ -51,8 +51,12 @@ class SettingViewController: Abstract {
         time_to_nearest_station.text! = ""
         nearest_station_name.text! = ""
         desitination_station_name.text! = ""
+        //フォーカスを先頭のフォームに持っていく
+        time_to_leave_home.becomeFirstResponder()
+        print("クリアしました")
         
     }
+    
     
     func inputCheck() -> (Bool) {
         

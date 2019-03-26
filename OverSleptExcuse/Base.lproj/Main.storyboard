@@ -267,7 +267,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="クリア"/>
                                 <connections>
-                                    <action selector="searchButton:" destination="tql-La-36s" eventType="touchDown" id="Udd-g5-ZU5"/>
+                                    <action selector="clearButton:" destination="tql-La-36s" eventType="touchUpInside" id="TXt-cw-ePA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfl-M9-PuT">
@@ -441,7 +441,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="xQ3-aW-NJr"/>
-        <segue reference="BHI-zd-1pR"/>
+        <segue reference="aQw-IW-qQc"/>
         <segue reference="4yS-BQ-al9"/>
     </inferredMetricsTieBreakers>
 </document>

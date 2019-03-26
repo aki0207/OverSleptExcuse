@@ -14,7 +14,6 @@ class SettingChatViewController: Abstract {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         super.createHeader(pTitle: "チャット設定画面")
         super.createSideMenu()
         
@@ -22,8 +21,6 @@ class SettingChatViewController: Abstract {
     
 
     @IBAction func doneButton(_ sender: Any) {
-        
-        
         
         userDefault.set(apiKeyTextField.text!, forKey: "apiKey")
         userDefault.set(destinationRoomNumberTextField.text!, forKey: "destinationRoomNumber")
@@ -33,6 +30,12 @@ class SettingChatViewController: Abstract {
     }
     
     @IBAction func clearButton(_ sender: Any) {
+        
+        apiKeyTextField.text = ""
+        destinationRoomNumberTextField.text = ""
+        apiKeyTextField.becomeFirstResponder()
+        print("クリアしました")
+        
     }
     
     func inputCheck() -> Bool {

@@ -51,16 +51,13 @@ class SettingExcuseViewController: Abstract,UITextViewDelegate {
         
     }
     
-    //テスト用参照ボタン
-    @IBAction func searchButton(_ sender: Any) {
+
+    @IBAction func clearButton(_ sender: Any) {
         
-        let realm = try! Realm()
-        let saved_excuse_data = realm.objects(Excuse.self)
-        // ためしに名前を表示
-        for excuse in saved_excuse_data {
-            print("titile: \(excuse.title)")
-            print("mainText: \(excuse.mainText)")
-        }
+        titleTextField.text = ""
+        mainTextTextField.text = ""
+        titleTextField.becomeFirstResponder()
+        print("クリアしました")
         
     }
     
