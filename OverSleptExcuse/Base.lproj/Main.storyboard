@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Send Message View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OverSleptExcuse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SendMessageViewController" customModule="OverSleptExcuse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -326,7 +326,7 @@
                     </view>
                     <connections>
                         <outlet property="mainTextErrorMessageLabel" destination="HLX-yc-eLD" id="vaY-yP-QWn"/>
-                        <outlet property="mainTextTextField" destination="M6A-5n-Qqa" id="5cB-dr-w2y"/>
+                        <outlet property="mainTextTextField" destination="M6A-5n-Qqa" id="JBt-tJ-Ay8"/>
                         <outlet property="placeholderLabel" destination="eX5-Yg-YkL" id="bNS-0D-Qli"/>
                         <outlet property="titileErrorMessageLabel" destination="JGM-wY-vvY" id="8BQ-Sc-r4l"/>
                         <outlet property="titleTextField" destination="gs6-Oa-FWr" id="dPa-iR-gDK"/>
@@ -425,7 +425,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xQ3-aW-NJr"/>
+        <segue reference="9vC-h7-Xbp"/>
         <segue reference="2bv-Nd-kMc"/>
     </inferredMetricsTieBreakers>
 </document>
