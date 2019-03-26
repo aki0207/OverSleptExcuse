@@ -1,7 +1,7 @@
 import UIKit
 import RealmSwift
 
-class SettingExcuseViewController: UIViewController,UITextViewDelegate {
+class SettingExcuseViewController: Abstract,UITextViewDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var mainTextTextField: UITextView!
@@ -14,6 +14,8 @@ class SettingExcuseViewController: UIViewController,UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        super.createHeader(pTitle: "言い訳設定画面")
+        super.createSideMenu()
         mainTextTextField.delegate = self
         
     }

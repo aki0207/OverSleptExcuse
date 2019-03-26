@@ -143,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qJ-CB-XMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-334" y="916"/>
+            <point key="canvasLocation" x="-514" y="1027"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="Aau-rb-Y6S">
@@ -343,6 +343,7 @@
                         <outlet property="placeholderLabel" destination="eX5-Yg-YkL" id="bNS-0D-Qli"/>
                         <outlet property="titileErrorMessageLabel" destination="JGM-wY-vvY" id="8BQ-Sc-r4l"/>
                         <outlet property="titleTextField" destination="gs6-Oa-FWr" id="dPa-iR-gDK"/>
+                        <segue destination="NXC-zd-Al3" kind="presentation" identifier="toSideMenu" modalTransitionStyle="crossDissolve" id="VEe-BK-czd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJI-8x-zuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -430,16 +431,17 @@
                         <outlet property="apiKeyTextField" destination="Y45-pG-YYE" id="ifw-vV-Tev"/>
                         <outlet property="destinationRoomNumberErrorLabel" destination="oQm-Lt-F1t" id="2xg-L2-2iE"/>
                         <outlet property="destinationRoomNumberTextField" destination="U3g-GK-afi" id="Lxz-tJ-Ayx"/>
+                        <segue destination="NXC-zd-Al3" kind="presentation" identifier="toSideMenu" modalTransitionStyle="crossDissolve" id="aQw-IW-qQc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXT-ZF-VC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-335" y="1646"/>
+            <point key="canvasLocation" x="647" y="1688"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="xQ3-aW-NJr"/>
-        <segue reference="2bv-Nd-kMc"/>
+        <segue reference="BHI-zd-1pR"/>
         <segue reference="4yS-BQ-al9"/>
     </inferredMetricsTieBreakers>
 </document>

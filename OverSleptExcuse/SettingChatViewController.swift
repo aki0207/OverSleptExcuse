@@ -15,7 +15,8 @@ class SettingChatViewController: Abstract {
         super.viewDidLoad()
 
         
-        
+        super.createHeader(pTitle: "チャット設定画面")
+        super.createSideMenu()
         
     }
     

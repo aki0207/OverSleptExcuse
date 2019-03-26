@@ -16,7 +16,7 @@ class SettingViewController: Abstract {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        super.createHeader(pTitle: "設定画面")
+        super.createHeader(pTitle: "時間・駅設定画面")
         super.createSideMenu()
         
     }
