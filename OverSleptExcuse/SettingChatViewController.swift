@@ -17,6 +17,8 @@ class SettingChatViewController: Abstract {
         super.createHeader(pTitle: "チャット設定画面")
         super.createSideMenu()
         
+        apiKeyTextField.text = userDefault.string(forKey: "apiKey")
+        
     }
     
 
