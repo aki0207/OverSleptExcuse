@@ -5,22 +5,22 @@ class SendMessage {
     var api_key = "my api key"
     var url = "https://api.chatwork.com/v2"
     var room_id = "my room id"
-    var msg = "メッセージ"
+    var message = "メッセージ"
 
 
-    func hitTheApi() {
+    func hitTheApi(pSendMessageInstance: SendMessage) {
         
         var urlString = "https://api.chatwork.com/v2"
-        urlString = "\(urlString)/rooms/\(room_id)/messages"
+        urlString = "\(urlString)/rooms/\(pSendMessageInstance.room_id)/messages"
         let request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL)
         
         //set the method(HTTP-POST)
         request.httpMethod = "POST"
         //set the header(s)
-        request.addValue(api_key, forHTTPHeaderField: "X-ChatWorkToken")
+        request.addValue(pSendMessageInstance.api_key, forHTTPHeaderField: "X-ChatWorkToken")
         
         //set the request-body(JSON)
-        let params = "body=\(msg)"
+        let params = "body=\(pSendMessageInstance.message)"
         
         
         do {

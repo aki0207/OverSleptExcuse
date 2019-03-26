@@ -25,7 +25,7 @@ class SettingChatViewController: Abstract {
         
         
         userDefault.set(apiKeyTextField.text!, forKey: "apiKey")
-        userDefault.set(destinationRoomNumberTextField.text!, forKey: "destinatiionRoomNumber")
+        userDefault.set(destinationRoomNumberTextField.text!, forKey: "destinationRoomNumber")
         userDefault.synchronize()
         print("保存しました")
         
@@ -41,7 +41,7 @@ class SettingChatViewController: Abstract {
         if !apiKeyTextField.text!.isInput(){
             apiKeyErrorLabel.text = "api key入力欄が空です。"
             ret = false
-        } else if(!apiKeyTextField.text!.isAlphanumeric) {
+        } else if(!apiKeyTextField.text!.isAlphanumeric()) {
             apiKeyErrorLabel.text = "半角英数字で入力してください"
             ret = false
         }
@@ -53,8 +53,6 @@ class SettingChatViewController: Abstract {
         } else if(!destinationRoomNumberTextField.text!.isNumber()) {
             destinationRoomNumberErrorLabel.text = "数字で入力してください"
         }
-        
-        
         
         return ret
     }

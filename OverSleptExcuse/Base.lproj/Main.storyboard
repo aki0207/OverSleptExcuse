@@ -414,7 +414,6 @@
                     </view>
                     <connections>
                         <outlet property="apiKeyErrorLabel" destination="K1T-4O-Jd6" id="BJW-W3-TS9"/>
-                        <outlet property="apiKeyLabel" destination="Y45-pG-YYE" id="7KX-jZ-Mkl"/>
                         <outlet property="apiKeyTextField" destination="Y45-pG-YYE" id="ifw-vV-Tev"/>
                         <outlet property="destinationRoomNumberErrorLabel" destination="oQm-Lt-F1t" id="2xg-L2-2iE"/>
                         <outlet property="destinationRoomNumberTextField" destination="U3g-GK-afi" id="Lxz-tJ-Ayx"/>

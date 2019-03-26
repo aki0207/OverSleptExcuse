@@ -117,8 +117,34 @@ class ViewController: Abstract,UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBAction func sendButton(_ sender: Any) {
         
-        var sendMessage = mainTextField.text!
         
+        
+       
+        
+
+        
+        
+        
+        
+        let sendMessage = SendMessage()
+        guard(userDefault.string(forKey: "apiKey") != nil) else {
+            return
+        }
+        sendMessage.api_key = userDefault.string(forKey: "apiKey")!
+        
+        
+    
+        guard(userDefault.string(forKey: "destinationRoomNumber") != nil) else {
+            return
+        }
+        
+        sendMessage.room_id = userDefault.string(forKey: "destinationRoomNumber")!
+        
+        sendMessage.message = mainTextField.text
+        sendMessage.hitTheApi(pSendMessageInstance: sendMessage)
+        
+       
+ 
     }
     
     
