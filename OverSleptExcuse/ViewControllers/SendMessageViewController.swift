@@ -109,7 +109,7 @@ class SendMessageViewController: Abstract,UIPickerViewDelegate, UIPickerViewData
         task.resume()
         condition.wait()
         condition.unlock()
-        //URLしばいて通信処理完了後こいつが呼ばれる
+        //URL叩いて通信処理完了後こいつが呼ばれる
         self.pickerView.reloadAllComponents()
         
     }
