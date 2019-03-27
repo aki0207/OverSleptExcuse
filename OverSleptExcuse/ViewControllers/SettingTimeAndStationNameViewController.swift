@@ -19,6 +19,11 @@ class SettingViewController: Abstract {
         super.createHeader(pTitle: "時間・駅設定画面")
         super.createSideMenu()
         
+        time_to_leave_home.text = userDefault.string(forKey: "timeToLeaveHome")
+        time_to_nearest_station.text = userDefault.string(forKey: "timeToNearestStation")
+        nearest_station_name.text = userDefault.string(forKey: "nearestStationName")
+        desitination_station_name.text = userDefault.string(forKey: "desitinationStationName")
+        
     }
     
     
@@ -36,9 +41,13 @@ class SettingViewController: Abstract {
             userDefault.set(nearest_station_name.text!, forKey: "nearestStationName")
             userDefault.set(desitination_station_name.text!, forKey: "desitinationStationName")
             userDefault.synchronize()
+            
+            //アラート表示
+            let alert = Alert()
+            alert.generateOkAlert(pTitle: "登録されました",pMessage: "")
+            present(alert.alert,animated: true, completion: nil)
             print("保存しました")
             
-            self.performSegue(withIdentifier: "toMain", sender: nil)
 
     }
         

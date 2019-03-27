@@ -47,6 +47,9 @@ class SettingExcuseViewController: Abstract,UITextViewDelegate {
             realm.add(excuse)
         }
         
+        let alert = Alert()
+        alert.generateOkAlert(pTitle: "登録されました",pMessage: "")
+        present(alert.alert,animated: true, completion: nil)
         print("追加しました")
         
     }

@@ -27,6 +27,10 @@ class SettingChatViewController: Abstract {
         userDefault.set(apiKeyTextField.text!, forKey: "apiKey")
         userDefault.set(destinationRoomNumberTextField.text!, forKey: "destinationRoomNumber")
         userDefault.synchronize()
+        
+        let alert = Alert()
+        alert.generateOkAlert(pTitle: "登録されました",pMessage: "")
+        present(alert.alert,animated: true, completion: nil)
         print("保存しました")
         
     }

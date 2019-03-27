@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  OverSleptExcuse
-//
-//  Created by ききょ on 2019/03/13.
-//  Copyright © 2019 kikyo. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

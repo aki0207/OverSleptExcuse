@@ -18,6 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX3-bw-Gtu">
+                                <rect key="frame" x="126" y="587" width="123" height="30"/>
+                                <color key="backgroundColor" red="0.25261374580000001" green="1" blue="0.12671295369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="メッセージ送信！"/>
+                                <connections>
+                                    <action selector="sendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DiA-SB-rEl"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X0P-th-5Y6">
                                 <rect key="frame" x="47" y="326" width="281" height="161"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -27,25 +35,18 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUf-1j-2Hv">
                                 <rect key="frame" x="47" y="90" width="281" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX3-bw-Gtu">
-                                <rect key="frame" x="164" y="464" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25261374580000001" green="1" blue="0.12671295369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="送信！"/>
-                                <connections>
-                                    <action selector="sendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DiA-SB-rEl"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UUf-1j-2Hv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="0pn-QZ-p2b"/>
                             <constraint firstItem="X0P-th-5Y6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6co-Dc-NCw"/>
                             <constraint firstItem="X0P-th-5Y6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-180" id="D0e-bz-1gU"/>
+                            <constraint firstItem="UX3-bw-Gtu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-50" id="Doy-Tm-vkk"/>
                             <constraint firstItem="X0P-th-5Y6" firstAttribute="top" secondItem="UUf-1j-2Hv" secondAttribute="bottom" constant="20" id="SOW-Hu-3th"/>
                             <constraint firstItem="X0P-th-5Y6" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.75" id="Y9G-BN-Ugn"/>
                             <constraint firstItem="UUf-1j-2Hv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fqW-TG-QVF"/>
                             <constraint firstItem="UUf-1j-2Hv" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.75" id="ihc-6T-QnW"/>
+                            <constraint firstItem="UX3-bw-Gtu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nAC-5C-sfO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -440,8 +441,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xQ3-aW-NJr"/>
-        <segue reference="aQw-IW-qQc"/>
+        <segue reference="9vC-h7-Xbp"/>
+        <segue reference="2bv-Nd-kMc"/>
         <segue reference="4yS-BQ-al9"/>
     </inferredMetricsTieBreakers>
 </document>

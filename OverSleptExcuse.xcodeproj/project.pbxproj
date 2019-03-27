@@ -14,6 +14,7 @@
 		CF0B8FD9223DBFDC008BA07C /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */; };
 		CF0B8FDD223DC7CE008BA07C /* side_menu_open_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF0B8FDC223DC7CE008BA07C /* side_menu_open_icon.png */; };
 		CF0DFAE32249EC910058DA0C /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0DFAE22249EC910058DA0C /* SendMessageViewController.swift */; };
+		CF0DFB5A224B22920058DA0C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0DFB59224B22920058DA0C /* Alert.swift */; };
 		CF999B9B2238EE6300423B5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF999B9A2238EE6300423B5C /* AppDelegate.swift */; };
 		CF999BA02238EE6300423B5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF999B9E2238EE6300423B5C /* Main.storyboard */; };
 		CF999BA22238EE7100423B5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF999BA12238EE7100423B5C /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		CF0B8FDC223DC7CE008BA07C /* side_menu_open_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = side_menu_open_icon.png; path = ../../../side_menu_open_icon.png; sourceTree = "<group>"; };
 		CF0DFAE22249EC910058DA0C /* SendMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageViewController.swift; sourceTree = "<group>"; };
+		CF0DFB59224B22920058DA0C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CF117237639F4A8450A500E8 /* Pods_OverSleptExcuse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OverSleptExcuse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF999B972238EE6300423B5C /* OverSleptExcuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OverSleptExcuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF999B9A2238EE6300423B5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,19 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		CF0DFB1E224A0D4C0058DA0C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */,
+				CF01EF3A2248B85E002100B8 /* SettingChatViewController.swift */,
+				CFAAE535223E289100973A85 /* SettingExcuseViewController.swift */,
+				CF999BC82238FC4D00423B5C /* SettingTimeAndStationNameViewController.swift */,
+				CF0DFB59224B22920058DA0C /* Alert.swift */,
+				CF0DFAE22249EC910058DA0C /* SendMessageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		CF999B8E2238EE6300423B5C = {
 			isa = PBXGroup;
 			children = (
@@ -167,19 +182,15 @@
 			children = (
 				CF0B8FDB223DC75C008BA07C /* Images */,
 				CF999BCA2238FC8400423B5C /* Extension */,
-				CF999B9A2238EE6300423B5C /* AppDelegate.swift */,
+				CF0DFB1E224A0D4C0058DA0C /* ViewControllers */,
 				CFAAE537223E3BFE00973A85 /* Excuse.swift */,
+				CF999B9A2238EE6300423B5C /* AppDelegate.swift */,
 				CF01EF382248B648002100B8 /* SendMessage.swift */,
-				CF0DFAE22249EC910058DA0C /* SendMessageViewController.swift */,
 				CF999B9E2238EE6300423B5C /* Main.storyboard */,
 				CF999BA12238EE7100423B5C /* Assets.xcassets */,
 				CF999BA32238EE7100423B5C /* LaunchScreen.storyboard */,
 				CF999BA62238EE7100423B5C /* Info.plist */,
-				CF999BC82238FC4D00423B5C /* SettingTimeAndStationNameViewController.swift */,
-				CFAAE535223E289100973A85 /* SettingExcuseViewController.swift */,
-				CF01EF3A2248B85E002100B8 /* SettingChatViewController.swift */,
 				CFBD5877223A48E400F5EA1A /* Abstract.swift */,
-				CF0B8FD8223DBFDC008BA07C /* SideMenuViewController.swift */,
 				CF0663DA22447057000675CF /* TimeToUseForUrl.swift */,
 			);
 			path = OverSleptExcuse;
@@ -446,6 +457,7 @@
 				CF0DFAE32249EC910058DA0C /* SendMessageViewController.swift in Sources */,
 				CFBD5878223A48E400F5EA1A /* Abstract.swift in Sources */,
 				CFAAE538223E3BFE00973A85 /* Excuse.swift in Sources */,
+				CF0DFB5A224B22920058DA0C /* Alert.swift in Sources */,
 				CF01EF3B2248B85E002100B8 /* SettingChatViewController.swift in Sources */,
 				CF999BCC2238FCA600423B5C /* String.swift in Sources */,
 				CF0663DB22447057000675CF /* TimeToUseForUrl.swift in Sources */,
