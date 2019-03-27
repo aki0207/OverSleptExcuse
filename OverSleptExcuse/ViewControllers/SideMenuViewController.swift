@@ -13,7 +13,7 @@ class SideMenuViewController: Abstract {
         super.viewDidLoad()
         
         // HEADER追加
-        super.createHeader(pTitle: "メニュー画面")
+        super.createHeader(pTitle: "メニュー画面やで")
         view.backgroundColor = UIColor.gray
         menuView.backgroundColor = UIColor.white
         closeViewRandomTag = Int.random(in: 0 ... 100000000)
