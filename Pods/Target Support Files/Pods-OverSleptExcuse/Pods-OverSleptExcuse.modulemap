@@ -1,0 +1,6 @@
+framework module Pods_OverSleptExcuse {
+  umbrella header "Pods-OverSleptExcuse-umbrella.h"
+
+  export *
+  module * { export * }
+}
